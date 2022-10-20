@@ -45,6 +45,8 @@ public class Midterm {
                         System.out.println("\nAnswer: " + userValues + " = " + subtract);
                         break;
                     case "M":
+				double totalMulti = multiplyArray(numArray);
+                    	System.out.println("Answer: " +totalMulti );
                         break;
                     case "D":
                         break;
@@ -63,6 +65,9 @@ public class Midterm {
                     case "I":
                         break;
                     case "E":
+				double smallestNum = smallestFromArray(numArray);
+                        System.out.println("The Smallest number is " + smallestNum );
+				
                         break;
                     default:
                         System.out.println("Error: Invalid choice!");
@@ -113,6 +118,17 @@ public class Midterm {
         }
         return sum; 
     }
+	
+	public static double multiplyArray(double[] numArray) {
+        double totalMulti = 1;
+        for (int i = 0; i < numArray.length; i++) {
+            totalMulti *= numArray[i];
+        }
+        return totalMulti;
+    }
+	
+	
+	
 
     public static double[] getUserNum(Scanner scnr) {
         // Asks the user to input x amount of values
